@@ -6,7 +6,10 @@ from matplotlib.dates import num2date,date2num
 from toto.filters.despike_phasespace3d import despike_phasespace3d
 from toto.filters.lanczos_filter import lanczos_filter
 from toto.filters.detrend import detrend
-from storm_surge.timeseries_processing.core_routines import check
+import os, sys
+pwd = os.path.dirname('__file__')
+sys.path.append(pwd)
+from timeseries_processing.core_routines import check
 from scipy.stats import linregress
 import copy
 
